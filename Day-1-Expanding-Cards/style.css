@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 90vw;
+    display: flex;
+}
+
+.card {
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    flex: .1;
+    margin: 10px;
+    border-radius: 50px;
+    transition: flex .5s linear;
+    cursor: pointer;
+    overflow:hidden;
+    filter: blur(2px);
+}
+
+.card.active {
+    flex: 1;
+    filter:blur(0px);
+}
+
+.card:nth-child(1) {
+    background-image: url(./img/1102108.jpg);
+}
+
+.card:nth-child(2) {
+    background-image: url(./img/1107308.jpg);
+}
+
+.card:nth-child(3) {
+    background-image: url(./img/1110665.jpg);
+}
+
+.card:nth-child(4) {
+    background-image: url(./img/1127879.jpg);
+}
+
+.card:nth-child(5) {
+    background-image: url(./img/1130246.jpg);
+}
+
+.card:nth-child(6) {
+    background-image: url(./img/1162753.jpg);
+}
+
+@media screen and (max-width:600px) {
+    .card {
+        margin: 2px;
+    }
+}
