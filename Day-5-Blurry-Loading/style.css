@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.background {
+    background-image: url('./img/1102108.jpg');
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: calc(100vw + 30px);
+    height: calc(100vh + 30px);
+    z-index: -1;
+    filter: blur(70px);
+}
+
+.loading {
+    color: white;
+    opacity: 1;
+    font-size: 40px;
+}
