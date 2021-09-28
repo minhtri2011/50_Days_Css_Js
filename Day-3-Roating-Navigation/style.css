@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(37, 34, 34);
+    overflow-x: hidden;
+}
+
+.circleContainer {
+    background-color: #fff;
+    width: 100vw;
+    max-height: 100vh;
+    padding: 20px;
+    transform-origin: top left;
+    transition: transform .5s ease;
+    overflow-x: auto;
+}
+
+.circleContainer.rotage {
+    transform: rotate(-20deg);
+}
+.circle.active {
+    transform: rotate(-90deg);
+}
+.circle {
+    z-index: 1;
+    position: fixed;
+    top: -100px;
+    left: -100px;
+    cursor: pointer;
+    transition:transform .3s ease;
+}
+
+.circle .circleContent {
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+    border-radius: 50%;
+    position: relative;
+}
+
+.circle .btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 26px;
+    height: 100px;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle .open {
+    left: 60%;
+}
+
+.circle .close {
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+.container img {
+    width: 100%;
+}
+
+.navbar ul {
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+    list-style: none;
+    transform: translateX(-200%);
+    transition: transform .3s linear;
+}
+
+.navbar ul li {
+    padding: 10px 0;
+    color: white;
+}
+.navbar.active ul {
+    transform: translateX(0%);
+    transition: transform .3s linear .2s;
+}
+
+.navbar ul li+li {
+    margin-left: 15px;
+}
+
+.navbar ul li+li+li {
+    margin-left: 30px;
+}
