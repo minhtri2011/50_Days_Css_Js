@@ -1,0 +1,95 @@
+:root {
+    --border-circle-disable: rgb(224, 224, 224);
+    --border-circle-enable: red;
+
+
+    ;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+
+.container {
+    text-align: center;
+}
+
+.progressBar {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.progressBar::before {
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: 100%;
+    background-color: var(--border-circle-disable);
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.percentBar {
+    position: absolute;
+    height: 4px;
+    width: 0%;
+    background-color: var(--border-circle-enable);
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+    transition: width .2s ease-in-out;
+}
+
+.circle {
+    border-radius: 50%;
+    background-color: white;
+    border: 4px solid var(--border-circle-disable);
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border .2s ease;
+}
+
+.circle.active {
+    transition: border .4s ease-in-out .2s;
+    border: 4px solid var(--border-circle-enable);
+}
+
+.btn {
+    padding: 10px 20px;
+    margin: 0 4px;
+    border: none;
+    background-color: rgb(134, 179, 238);
+    color: white;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: scale(.9);
+}
+
+.btn:disabled {
+    background-color: var(--border-circle-disable);
+    cursor: auto;
+}
