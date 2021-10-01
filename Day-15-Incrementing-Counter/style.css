@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    /* width: 100vw; */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, rgb(184, 212, 255) 50%, rgb(0, 183, 255) 50%);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    flex-direction: column;
+}
+
+.counter {
+    margin: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.counterTitle {
+    font-size: 30px;
+    color: white;
+}
+
+.counterNumber {
+    font-size: 50px;
+    color: white;
+}
