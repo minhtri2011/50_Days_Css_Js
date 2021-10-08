@@ -7,7 +7,7 @@ const number = document.querySelectorAll('.counterNumber');
       const numberCounterHtml = Number(num.innerText);
       const increment = target / 1000;
       if (numberCounterHtml < target) {
-        num.innerText = `${Math.ceil(numberCounterHtml + increment)}`;
+        num.innerText = `${ Math.ceil(numberCounterHtml + increment)}`;
         setTimeout(updateCounter, 1);
       }
     };
