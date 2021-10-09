@@ -4,6 +4,7 @@ const percent = document.querySelector('.percent');
 const liters = document.getElementById('liters');
 
 update();
+
 cups.forEach((cup, index) => {
   cup.addEventListener('click', () => {
     highLightCup(index);
