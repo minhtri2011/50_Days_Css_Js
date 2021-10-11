@@ -1,6 +1,7 @@
+
 * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
@@ -12,57 +13,36 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* background-color: black; */
+}
+canvas{
+ 
+border: 1px solid black;
+}
+.toolBox{
+  width: 800px;
+  background-color: purple;
+  display: flex;
   justify-content: center;
-  background-color: black;
+  align-items: center;
 }
-.kinetic {
-  width: 100px;
-  height: 100px;
-  position: relative;
-}
-.kinetic::after,
-.kinetic::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border: 50px solid transparent;
-  border-bottom-color: white;
-  animation:a1 2s linear infinite .5s;
-}
-.kinetic::before{
-  transform: rotate(90deg);
-  animation:a2 2s linear infinite;
-  /* animation-delay: 1s; */
-}
-@keyframes a1 {
-  0%,25%{
-    transform: rotate(0deg);
-  }
-  50%,75%{
-    transform: rotate(180deg);
-  }
-  100%{
-    transform: rotate(360deg);
-  }
-}
-@keyframes a2 {
-  0%,25%{
-    transform: rotate(90deg);
-  }
-  50%,75%{
-    transform: rotate(270deg);
-  }
-  100%{
-    transform: rotate(450deg);
-  }
+.toolBox>*{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+margin:10px;
+width: 50px;
+height: 20px;
+color:white;
+font-weight: bold;
+cursor: pointer;
+font-size: 20px;
 }
